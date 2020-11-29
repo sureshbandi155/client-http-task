@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
       this.coursesService.updateData(this.formData.id, this.formData)
         .subscribe(response => {
           console.log(response);
+          this.getCourse();
         });
       setTimeout(() => {
         this.getCourse();
